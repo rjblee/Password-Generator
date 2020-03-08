@@ -7,13 +7,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/password.css">
     <title>Random Password Generator</title>
+
+    <script>
+        var keywordList = "abcdefghijklmnopqrstuvwxyz1234567890";
+        var temporary = "";
+
+        function generatePassword(passwordLength) {
+            temporary = "";
+            for (let i = 0; i < passwordLength; i++) {
+                temporary += keywordList.charAt(Math.floor(Math.random() * keywordList.length));
+            }
+            return temporary;
+        }
+    
+    </script>
 </head>
 <body>
 
     <div class="container">
         <form name="passGen">
             <input type="text" size="18" name="output">
-            <input type="button" value="Generate Password">
+            <input type="button" value="Generate Password" onclick="populateform(this.form.length.value)"> <br>
+            <strong>Password Length: </strong> <input type="text" name="length" size="5" value="6">
         </form>
     </div>
 
