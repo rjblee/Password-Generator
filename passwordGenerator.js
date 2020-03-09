@@ -1,4 +1,4 @@
-var keywordList = "abcdefghijklmnopqrstuvwxyz1234567890";
+var keywordList = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
 var temporary = "";
 
 function generatePassword(passwordLength) {
